@@ -1,0 +1,4 @@
+C:\Users\Popo\source\repos\Taustajarjestelmat 2\Taustajarjestelmat 2\obj\Debug\netcoreapp1.1\Taustajarjestelmat 2.csprojResolveAssemblyReference.cache
+C:\Users\Popo\source\repos\Taustajarjestelmat 2\Taustajarjestelmat 2\obj\Debug\netcoreapp1.1\Taustajarjestelmat 2.csproj.CoreCompileInputs.cache
+C:\Users\Popo\source\repos\Taustajarjestelmat 2\Taustajarjestelmat 2\obj\Debug\netcoreapp1.1\Taustajarjestelmat 2.AssemblyInfoInputs.cache
+C:\Users\Popo\source\repos\Taustajarjestelmat 2\Taustajarjestelmat 2\obj\Debug\netcoreapp1.1\Taustajarjestelmat 2.AssemblyInfo.cs
