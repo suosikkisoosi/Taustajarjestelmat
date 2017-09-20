@@ -17,41 +17,57 @@ namespace Taustajarjestelmat_2.Repos
             _collection = database.GetCollection<Player>("players");
         }
 
-        public Task<Item> CreateItem(Guid playerId, Item item)
+        public async Task<Item> CreateItem(Guid playerId, Item item)
         {
-            throw new NotImplementedException();
+            Player p = await GetPlayer(playerId);
+            p.Items.Add(item.id, item);
+            return item;
         }
 
         //KAYTA _COLLECTION.REPLACEONEASYNC
         public async Task<Player> CreatePlayer(Player player)
         {
+
             await _collection.InsertOneAsync(player);
             return player;
         }
 
-        public Task<Item> DeleteItem(Guid playerId, Item item)
+        public async Task<Item> DeleteItem(Guid playerId, Item item)
         {
-            throw new NotImplementedException();
+            Player p = await GetPlayer(playerId);
+            Item i = item;
+            p.Items.Remove(item.id);
+            return i;
         }
 
-        public Task<Player> DeletePlayer(Guid playerId)
+        public async Task<Player> DeletePlayer(Guid playerId)
         {
-            throw new NotImplementedException();
+            Player player = await GetPlayer(playerId);
+            FilterDefinition<Player> filter = Builders<Player>.Filter.Eq(p => p.Id, playerId); //Type can be var
+            await _collection.DeleteOneAsync(filter);
+            return player;
         }
 
-        public Task<Item[]> GetAllItems(Guid playerId)
+        public async Task<Item[]> GetAllItems(Guid playerId)
         {
-            throw new NotImplementedException();
+            Player player = await GetPlayer(playerId);
+            Item[] items = player.Items.Values.ToArray();
+            return items;
         }
 
-        public Task<Player[]> GetAllPlayers()
+        public async Task<Player[]> GetAllPlayers()
         {
-            throw new NotImplementedException();
+            FilterDefinition<Player> filter = Builders<Player>.Filter.OfType<Player>(); //Type can be var
+            var cursor = await _collection.FindAsync(filter);
+            var players = await cursor.ToListAsync();
+            return players.ToArray();
         }
 
-        public Task<Item> GetItem(Guid playerId, Guid itemId)
+        public async Task<Item> GetItem(Guid playerId, Guid itemId)
         {
-            throw new NotImplementedException();
+            Player player = await GetPlayer(playerId);
+            Item i = player.Items[itemId];
+            return i;
         }
 
         public async Task<Player> GetPlayer(Guid playerId)
@@ -62,9 +78,11 @@ namespace Taustajarjestelmat_2.Repos
             return player;
         }
 
-        public Task<Item> UpdateItem(Guid playerId, Item item)
+        public async Task<Item> UpdateItem(Guid playerId, Item item)
         {
-            throw new NotImplementedException();
+            Player player = await GetPlayer(playerId);
+            player.Items[item.id] = item;
+            return item;
         }
 
         public async Task<Player> UpdatePlayer(Player player)

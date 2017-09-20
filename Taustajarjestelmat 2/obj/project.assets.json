@@ -9489,11 +9489,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Popo\\source\\repos\\Taustajarjestelmat 2\\Taustajarjestelmat 2\\Taustajarjestelmat 2.csproj",
+      "projectUniqueName": "C:\\Users\\Popo\\Documents\\Taustajarjestelmat\\Taustajarjestelmat 2\\Taustajarjestelmat 2.csproj",
       "projectName": "Taustajarjestelmat 2",
-      "projectPath": "C:\\Users\\Popo\\source\\repos\\Taustajarjestelmat 2\\Taustajarjestelmat 2\\Taustajarjestelmat 2.csproj",
+      "projectPath": "C:\\Users\\Popo\\Documents\\Taustajarjestelmat\\Taustajarjestelmat 2\\Taustajarjestelmat 2.csproj",
       "packagesPath": "C:\\Users\\Popo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Popo\\source\\repos\\Taustajarjestelmat 2\\Taustajarjestelmat 2\\obj\\",
+      "outputPath": "C:\\Users\\Popo\\Documents\\Taustajarjestelmat\\Taustajarjestelmat 2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

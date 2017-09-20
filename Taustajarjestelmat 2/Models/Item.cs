@@ -7,9 +7,9 @@ namespace Taustajarjestelmat_2.Models
 {
     public class Item
     {
-        Guid id;
-        string name;
-        int lvl;
+        public Guid id;
+        public string name;
+        public int lvl;
 
         public Guid Id { get { return id; } set { id = value; } }
         public string Name { get { return name; } set { name = value; } }
