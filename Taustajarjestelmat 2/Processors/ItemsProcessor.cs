@@ -26,12 +26,14 @@ namespace Taustajarjestelmat_2.Processors
 
         public async Task<Item> Create(NewItem nItem)
         {
-            Item i = new Item(Guid.NewGuid(), nItem.Name) {Lvl = nItem.Lvl  };
+            Item i = new Item(Guid.NewGuid(), nItem.Name) { Lvl = nItem.Lvl };
             return await repo.Create(i);
         }
 
         public async Task<Item> Modify(Guid id, ModifiedItem mItem)
         {
+            //_players[playerId].GetItems()[ItemId] = Item;
+            //return Item;
             return await repo.Modify(id, mItem); ;
         }
 

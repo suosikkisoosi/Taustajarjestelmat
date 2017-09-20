@@ -44,6 +44,7 @@ namespace Taustajarjestelmat_2.Repositories
 
         public async Task<Player> Delete(Guid id)
         {
+            
             Player p;
             if (_players.TryGetValue(id, out p))
                 _players.Remove(id);
